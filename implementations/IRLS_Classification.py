@@ -16,9 +16,6 @@ def weight_matrix(dataset,parameters):
 def irls(X,y,n_iter):
 	ones = np.ones((np.size(X,0),1))
 	X = np.hstack((ones,X))
-	scaler = StandardScaler()
-	scaler.fit(X)
-	X = scaler.transform(X)
 	#Newton_step
 	theta = np.zeros((np.size(X,1),1))
 	for i in range(n_iter):
